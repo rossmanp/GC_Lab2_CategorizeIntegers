@@ -3,14 +3,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+// Pete Rossman
+// Grand Circus .NET Bootcamp Lab 2
+// March 28, 2017
 
 namespace GC_Lab2_CategorizeIntegers
 {
+    //This program takes an integer as input, and then displays
+    //a message based on the inputted integer.
     class Program
     {
         static void Main(string[] args)
         {
             int myInt = 0;
+            //The do while loop runs until an integer from 1 to 100
+            //is obtained as input.
             do
             {
                 Console.WriteLine("Type in an integer from among 1 to 100: ");
@@ -22,7 +29,10 @@ namespace GC_Lab2_CategorizeIntegers
             }
             while (myInt < 1 || myInt > 100);
 
-                if (myInt % 2 == 1)
+            //The following conditionals display whether the input is odd or even
+            //and in some cases print the number.
+
+            if (myInt % 2 == 1)
             {
                 Console.WriteLine("Your number is " + myInt + " and it is odd.");
             }
