@@ -1,1 +1,6 @@
 c:\users\peter\onedrive\documents\visual studio 2015\Projects\GC_Lab2_CategorizeIntegers\GC_Lab2_CategorizeIntegers\bin\Debug\GC_Lab2_CategorizeIntegers.exe.config
+c:\users\peter\onedrive\documents\visual studio 2015\Projects\GC_Lab2_CategorizeIntegers\GC_Lab2_CategorizeIntegers\bin\Debug\GC_Lab2_CategorizeIntegers.exe
+c:\users\peter\onedrive\documents\visual studio 2015\Projects\GC_Lab2_CategorizeIntegers\GC_Lab2_CategorizeIntegers\bin\Debug\GC_Lab2_CategorizeIntegers.pdb
+c:\users\peter\onedrive\documents\visual studio 2015\Projects\GC_Lab2_CategorizeIntegers\GC_Lab2_CategorizeIntegers\obj\Debug\GC_Lab2_CategorizeIntegers.csprojResolveAssemblyReference.cache
+c:\users\peter\onedrive\documents\visual studio 2015\Projects\GC_Lab2_CategorizeIntegers\GC_Lab2_CategorizeIntegers\obj\Debug\GC_Lab2_CategorizeIntegers.exe
+c:\users\peter\onedrive\documents\visual studio 2015\Projects\GC_Lab2_CategorizeIntegers\GC_Lab2_CategorizeIntegers\obj\Debug\GC_Lab2_CategorizeIntegers.pdb
