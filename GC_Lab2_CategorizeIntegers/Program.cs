@@ -32,7 +32,7 @@ namespace GC_Lab2_CategorizeIntegers
                        int.TryParse(Console.ReadLine(), out myInt);
                        if (myInt < 1 || myInt > 100)
                        {
-                          Console.WriteLine("Your input is not an integer from 1 to 100 " + name + " !");
+                          Console.WriteLine("Your input is not an integer from 1 to 100 " + name + "!");
                         }
                       }
                       while (myInt < 1 || myInt > 100);
@@ -65,7 +65,7 @@ namespace GC_Lab2_CategorizeIntegers
 
                     if (runAgain.ToLower() == "n")
                     {
-                        Console.WriteLine("Goodbye" + name + " !");
+                        Console.WriteLine("Goodbye" + name + "!");
                         runProgram = false;
                         Console.ReadLine();
                     }
