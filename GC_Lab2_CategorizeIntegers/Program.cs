@@ -28,10 +28,10 @@ namespace GC_Lab2_CategorizeIntegers
                      do
                      {
                        Console.WriteLine(name + ", type in an integer from among 1 to 100: ");
-                       myInt = int.Parse(Console.ReadLine());
+                       int.TryParse(Console.ReadLine(), out myInt);
                        if (myInt < 1 || myInt > 100)
                        {
-                          Console.WriteLine("The integer you input is not an integer from 1 to 100 " + name + " !");
+                          Console.WriteLine("Your input is not an integer from 1 to 100 " + name + " !");
                         }
                       }
                       while (myInt < 1 || myInt > 100);
@@ -59,8 +59,9 @@ namespace GC_Lab2_CategorizeIntegers
                 runAgain = Console.ReadLine();
                 if (runAgain.ToLower() == "n")
                 {
-                    Console.WriteLine("Goodbye" + name + "!");
+                    Console.WriteLine("Goodbye" + name + " !");
                     runProgram = false;
+                    Console.ReadLine();
                 }
         }
       }
