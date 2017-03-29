@@ -52,9 +52,13 @@ namespace GC_Lab2_CategorizeIntegers
                     {
                         Console.WriteLine(name + ", your number is even.");
                     }
-                    else
+                    else if (myInt < 26)
                     {
                         Console.WriteLine(name + ", your number is even and less than 25.");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Unknown error occurred!");
                     }
 
                     //The user is asked if he or she wants to use the program again; if no
@@ -65,7 +69,7 @@ namespace GC_Lab2_CategorizeIntegers
 
                     if (runAgain.ToLower() == "n")
                     {
-                        Console.WriteLine("Goodbye" + name + "!");
+                        Console.WriteLine("Goodbye " + name + "!");
                         runProgram = false;
                         Console.ReadLine();
                     }
