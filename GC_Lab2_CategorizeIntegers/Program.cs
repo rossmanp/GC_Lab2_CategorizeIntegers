@@ -18,7 +18,7 @@ namespace GC_Lab2_CategorizeIntegers
             int myInt = 0;
             string runAgain;           
             bool runProgram = true;
-
+            List<int> allInts = new List<int>();
             Console.Write("Please enter your name: ");
             string name = Console.ReadLine();
 
@@ -50,10 +50,10 @@ namespace GC_Lab2_CategorizeIntegers
                      }
                       while (myInt < 1 || myInt > 100);
 
-                    //The following conditionals display whether the input is odd or even
-                    //and in some cases print the number.
-
-                    if (myInt % 2 == 1)
+                //The following conditionals display whether the input is odd or even
+                //and in some cases print the number.
+                allInts.Add(myInt);
+                    if (IsIntOdd(myInt))
                     {
                         Console.WriteLine(name + ", your number is " + myInt + " and it is odd.");
                     }
@@ -73,20 +73,46 @@ namespace GC_Lab2_CategorizeIntegers
                     {
                         Console.WriteLine("Unknown error occurred!");
                     }
-
-                    //The user is asked if he or she wants to use the program again; if no
-                    //is indicated, the program exits.
-
-                    Console.Write("Do you want to input another integer, " + name + "? (y/n):");
+                bool runPrintLoop = true;
+                //The user is asked if he or she wants to use the program again; if no
+                //is indicated, the program exits.
+                while (runPrintLoop)
+                {
+                    Console.Write("Do you want to input another integer or print all integers so far, " + name + "? (y/n/print):");
                     runAgain = Console.ReadLine();
 
                     if (runAgain.ToLower() == "n")
                     {
                         Console.WriteLine("Goodbye " + name + "!");
                         runProgram = false;
+                        runPrintLoop = false;
                         Console.ReadLine();
                     }
+                    else if (runAgain.ToLower() == "print")
+                    {
+                        Console.WriteLine("The list of numbers input so far is:");
+                        foreach (int i in allInts)
+                        {                         
+                            Console.WriteLine(i);
+                        }
+                    }
+                    else
+                    {
+                        runPrintLoop = false;
+                    }
+                }   
+            }
         }
-      }
+        public static bool IsIntOdd(int number)
+        {
+            if ((number % 2) == 1)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
    }
 }
