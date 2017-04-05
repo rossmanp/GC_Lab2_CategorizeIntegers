@@ -23,18 +23,31 @@ namespace GC_Lab2_CategorizeIntegers
             string name = Console.ReadLine();
 
             while (runProgram)
-                { 
-                     //The do while loop runs until an integer from 1 to 100
-                     //is obtained as input.
+                {
+                //The do while loop runs until an integer from 1 to 100
+                //is obtained as input.
+                myInt = 0;
                      do
                      {
                        Console.WriteLine(name + ", type in an integer from among 1 to 100: ");
-                       int.TryParse(Console.ReadLine(), out myInt);
-                       if (myInt < 1 || myInt > 100)
-                       {
-                          Console.WriteLine("Your input is not an integer from 1 to 100 " + name + "!");
+
+                        try
+                        {
+                            myInt = int.Parse(Console.ReadLine());
+                            if (myInt < 1 || myInt > 100)
+                            {
+                                throw new IndexOutOfRangeException();
+                            }
+                        }                       
+                        catch (FormatException)
+                        {
+                            Console.WriteLine("Please enter a number!");
                         }
-                      }
+                        catch (IndexOutOfRangeException)
+                        {
+                            Console.WriteLine("Please enter a number from 1 to 100!");
+                        }                      
+                     }
                       while (myInt < 1 || myInt > 100);
 
                     //The following conditionals display whether the input is odd or even
