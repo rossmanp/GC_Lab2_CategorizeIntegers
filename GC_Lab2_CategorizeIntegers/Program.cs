@@ -52,28 +52,9 @@ namespace GC_Lab2_CategorizeIntegers
 
                 //The following conditionals display whether the input is odd or even
                 //and in some cases print the number.
-                allInts.Add(myInt);
-                    if (IsIntOdd(myInt))
-                    {
-                        Console.WriteLine(name + ", your number is " + myInt + " and it is odd.");
-                    }
-                    else if (myInt > 60)
-                    {
-                        Console.WriteLine(name + ", your number is " + myInt + " and it is even.");
-                    }
-                    else if (myInt <= 60 && myInt >= 26)
-                    {
-                        Console.WriteLine(name + ", your number is even.");
-                    }
-                    else if (myInt < 26)
-                    {
-                        Console.WriteLine(name + ", your number is even and less than 25.");
-                    }
-                    else
-                    {
-                        Console.WriteLine("Unknown error occurred!");
-                    }
-                bool runPrintLoop = true;
+                    allInts.Add(myInt);
+                    PrintOutput(myInt, name);
+                    bool runPrintLoop = true;
                 //The user is asked if he or she wants to use the program again; if no
                 //is indicated, the program exits.
                 while (runPrintLoop)
@@ -92,7 +73,7 @@ namespace GC_Lab2_CategorizeIntegers
                     {
                         Console.WriteLine("The list of numbers input so far is:");
                         foreach (int i in allInts)
-                        {                         
+                        {
                             Console.WriteLine(i);
                         }
                     }
@@ -114,5 +95,29 @@ namespace GC_Lab2_CategorizeIntegers
                 return false;
             }
         }
+        public static void PrintOutput(int myInt, string name)
+        {
+            if (IsIntOdd(myInt))
+            {
+                Console.WriteLine(name + ", your number is " + myInt + " and it is odd.");
+            }
+            else if (myInt > 60)
+            {
+                Console.WriteLine(name + ", your number is " + myInt + " and it is even.");
+            }
+            else if (myInt <= 60 && myInt >= 26)
+            {
+                Console.WriteLine(name + ", your number is even.");
+            }
+            else if (myInt < 26)
+            {
+                Console.WriteLine(name + ", your number is even and less than 25.");
+            }
+            else
+            {
+                Console.WriteLine("Unknown error occurred!");
+            }
+        }
+            
    }
 }
